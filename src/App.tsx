@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import SavedRepos from "./pages/SavedRepos";
 
-const [username, SetUsername] = createSignal("Ehsan-Home");
+const [username, setUsername] = createSignal("Ehsan-Home");
 const [repos, setRepos] = createSignal([]);
 
 const App: Component = () => {
@@ -26,5 +26,5 @@ const App: Component = () => {
   );
 };
 
-export { SetUsername, repos };
+export { setUsername, repos };
 export default App;
