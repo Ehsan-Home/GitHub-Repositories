@@ -1,5 +1,6 @@
 import { Component, createEffect } from "solid-js";
 import { setUsername, repos } from "../App";
+import CardRepo from "../components/CardRepo";
 
 const Home: Component = () => {
   const extractUserName = (event: Event) => {
@@ -16,6 +17,7 @@ const Home: Component = () => {
         <input id="username" type="text" class="p-1 align-middle" required />
         <button class="ms-3 btn btn-dark">Search</button>
       </form>
+      <CardRepo />
     </div>
   );
 };
