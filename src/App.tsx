@@ -1,14 +1,13 @@
 import { Route, Routes } from "solid-app-router";
 import { Component, createEffect, createSignal } from "solid-js";
 import Nav from "./components/Nav";
-import fetchRepos from "./networks/FetchRepos";
 import Home from "./pages/Home";
 import SavedRepos from "./pages/SavedRepos";
 
-const App: Component = () => {
-  const [username, SetUsername] = createSignal("Ehsan-Home");
-  const [repos, setRepos] = createSignal([]);
+const [username, SetUsername] = createSignal("Ehsan-Home");
+const [repos, setRepos] = createSignal([]);
 
+const App: Component = () => {
   createEffect(async () => {
     const data = await fetch(
       `https://api.github.com/users/${username()}/repos`
@@ -27,4 +26,5 @@ const App: Component = () => {
   );
 };
 
+export { SetUsername, repos };
 export default App;
