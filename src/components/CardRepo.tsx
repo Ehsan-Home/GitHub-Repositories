@@ -3,7 +3,7 @@ import { CardProps } from "./Interfaces";
 
 const CardRepo: Component<CardProps> = ({ repo }) => {
   return (
-    <div class="card">
+    <div class="card mb-3">
       <div class="card-header">&#11088; starts: {repo.stargazers_count}</div>
       <div class="card-body">
         <a
