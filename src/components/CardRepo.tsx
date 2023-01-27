@@ -4,11 +4,13 @@ import { Card, CardProps } from "./Interfaces";
 
 const saveClicked = (repo: Card) => {
   setSavedRepos([repo, ...savedRepos()]);
+  localStorage.setItem("savedRepos", JSON.stringify(savedRepos()));
 };
 
 const unsaveClicked = (repoId: string) => {
   const nextStateSavedRepos = savedRepos().filter((repo) => repo.id !== repoId);
   setSavedRepos(nextStateSavedRepos);
+  localStorage.setItem("savedRepos", JSON.stringify(savedRepos()));
 };
 
 const isRepoSaved = (repoId: string) => {
