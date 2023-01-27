@@ -1,7 +1,7 @@
 import { Route, Routes } from "solid-app-router";
 import { Component, createEffect, createSignal } from "solid-js";
 import Nav from "./components/Nav";
-import Home from "./pages/Home";
+import Home, { setIsLoading } from "./pages/Home";
 import SavedRepos from "./pages/SavedRepos";
 
 const [username, setUsername] = createSignal("Ehsan-Home");
@@ -13,6 +13,7 @@ const App: Component = () => {
       `https://api.github.com/users/${username()}/repos`
     );
     setRepos(await data.json());
+    setIsLoading(false);
   });
 
   return (
