@@ -1,5 +1,10 @@
 import { Component } from "solid-js";
-import { CardProps } from "./Interfaces";
+import { savedRepos, setSavedRepos } from "../pages/SavedRepos";
+import { Card, CardProps } from "./Interfaces";
+
+const saveClicked = (repo: Card) => {
+  setSavedRepos([repo, ...savedRepos()]);
+};
 
 const CardRepo: Component<CardProps> = ({ repo }) => {
   return (
@@ -15,7 +20,9 @@ const CardRepo: Component<CardProps> = ({ repo }) => {
           <strong>{repo.owner.login}</strong>/{repo.name}
         </a>
         <p class="card-text">{repo.description}</p>
-        <button class="btn btn-success">Save</button>
+        <button class="btn btn-success" onClick={() => saveClicked(repo)}>
+          Save
+        </button>
       </div>
     </div>
   );

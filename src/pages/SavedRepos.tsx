@@ -1,9 +1,16 @@
-import { Component } from "solid-js";
+import { Component, createSignal, For } from "solid-js";
+import CardRepo from "../components/CardRepo";
+import { Card } from "../components/Interfaces";
 
-const SavedRepos:Component = () => {
-    return (
-        <div>Saved Repos</div>
-    )
-}
+const [savedRepos, setSavedRepos] = createSignal([] as Card[]);
 
-export default SavedRepos
+const SavedRepos: Component = () => {
+  return (
+    <For each={savedRepos()}>
+      {(savedRepo: Card) => <CardRepo repo={savedRepo} />}
+    </For>
+  );
+};
+
+export { savedRepos, setSavedRepos };
+export default SavedRepos;
