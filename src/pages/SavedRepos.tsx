@@ -6,9 +6,12 @@ const [savedRepos, setSavedRepos] = createSignal([] as Card[]);
 
 const SavedRepos: Component = () => {
   return (
-    <For each={savedRepos()}>
-      {(savedRepo: Card) => <CardRepo repo={savedRepo} />}
-    </For>
+    <div>
+      <h3>Saved Repos</h3>
+      <For each={savedRepos()}>
+        {(savedRepo: Card) => <CardRepo repo={savedRepo} />}
+      </For>
+    </div>
   );
 };
 
