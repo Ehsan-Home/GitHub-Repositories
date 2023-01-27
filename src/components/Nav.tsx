@@ -1,5 +1,6 @@
 import { NavLink } from "solid-app-router";
 import { Component } from "solid-js";
+import { savedRepos } from "../pages/SavedRepos";
 
 const Nav: Component = () => {
   return (
@@ -17,7 +18,7 @@ const Nav: Component = () => {
         class="me-2 btn btn-primary"
         activeClass="btn-success"
       >
-        Saved repos ~ 5
+        Saved repos ~ {savedRepos().length}
       </NavLink>
     </nav>
   );
