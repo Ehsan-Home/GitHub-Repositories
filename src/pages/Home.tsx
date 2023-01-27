@@ -14,7 +14,6 @@ const Home: Component = () => {
       "username"
     ) as HTMLInputElement;
     setUsername(usernameTextInput.value);
-    setIsLoading(true);
   };
 
   return (
