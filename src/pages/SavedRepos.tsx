@@ -1,5 +1,6 @@
-import { Component, createSignal, For } from "solid-js";
+import { Component, createSignal, For, Show } from "solid-js";
 import CardRepo from "../components/CardRepo";
+import Empty from "../components/Empty";
 import { Card } from "../components/Interfaces";
 
 const savedReposFromLsInString = localStorage.getItem("savedRepos") ?? "[]";
@@ -10,9 +11,11 @@ const SavedRepos: Component = () => {
   return (
     <div>
       <h3>Saved Repos</h3>
-      <For each={savedRepos()}>
-        {(savedRepo: Card) => <CardRepo repo={savedRepo} />}
-      </For>
+      <Show when={savedRepos().length !== 0} fallback={<Empty />}>
+        <For each={savedRepos()}>
+          {(savedRepo: Card) => <CardRepo repo={savedRepo} />}
+        </For>
+      </Show>
     </div>
   );
 };
