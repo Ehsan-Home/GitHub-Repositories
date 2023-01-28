@@ -18,9 +18,10 @@ const Home: Component = () => {
   //   setRepos(await data.json());
   //   setIsLoading(false);
   // });
+
   createEffect(() => {
     setIsLoading(true);
-    fetch(`https://api.github.com/users/${username()}/repos`)
+    fetch(`https://api.github.com/users/${username()}/repos?page=${params.id}`)
       .then((res) => res.json())
       .then((res: []) => {
         setRepos(res);
@@ -32,7 +33,6 @@ const Home: Component = () => {
   });
 
   const params = useParams();
-  console.log("id", params.id);
 
   const extractUserName = (event: Event) => {
     event.preventDefault();
