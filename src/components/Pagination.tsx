@@ -7,7 +7,10 @@ const Pagination: Component = () => {
     <nav aria-label="Page navigation example" class="my-3">
       <ul class="pagination justify-content-center">
         <li class="page-item">
-          <NavLink class="page-link" href={`/${parseInt(pageNumber()) - 1}`}>
+          <NavLink
+            class={`page-link ${pageNumber() === "1" ? "disabled" : ""}`}
+            href={`/${parseInt(pageNumber()) - 1}`}
+          >
             Previous
           </NavLink>
         </li>
