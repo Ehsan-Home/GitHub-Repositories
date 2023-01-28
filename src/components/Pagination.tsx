@@ -1,33 +1,38 @@
-import { Component } from "solid-js";
+import { NavLink } from "solid-app-router";
+import { Component, For } from "solid-js";
 
 const Pagination: Component = () => {
   return (
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
         <li class="page-item">
-          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+          <NavLink
+            class="page-link"
+            href={`prev`}
+            tabindex="-1"
+            aria-disabled="true"
+          >
             Previous
-          </a>
+          </NavLink>
         </li>
+        <For each={[1, 2, 3]}>
+          {(i) => (
+            <li class="page-item">
+              <NavLink class="page-link" href={`/${i}`}>
+                {i}
+              </NavLink>
+            </li>
+          )}
+        </For>
         <li class="page-item">
-          <a class="page-link" href="#">
-            1
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">
-            2
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">
-            3
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">
+          <NavLink
+            class="page-link"
+            href={`next`}
+            tabindex="-1"
+            aria-disabled="true"
+          >
             Next
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
