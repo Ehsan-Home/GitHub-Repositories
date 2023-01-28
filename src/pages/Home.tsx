@@ -3,6 +3,7 @@ import { setUsername, repos } from "../App";
 import CardRepo from "../components/CardRepo";
 import Empty from "../components/Empty";
 import { Card } from "../components/Interfaces";
+import Pagination from "../components/Pagination";
 import Spinner from "../components/Spinner";
 
 const [isLoading, setIsLoading] = createSignal(true);
@@ -28,6 +29,7 @@ const Home: Component = () => {
           <For each={repos()}>{(repo: Card) => <CardRepo repo={repo} />}</For>
         </Show>
       </Show>
+      <Pagination />
     </div>
   );
 };
