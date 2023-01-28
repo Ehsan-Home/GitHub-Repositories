@@ -4,7 +4,7 @@ import { pageNumber } from "../pages/Home";
 
 const Pagination: Component = () => {
   return (
-    <nav aria-label="Page navigation example">
+    <nav aria-label="Page navigation example" class="my-3">
       <ul class="pagination justify-content-center">
         <li class="page-item">
           <NavLink class="page-link" href={`/${parseInt(pageNumber()) - 1}`}>
