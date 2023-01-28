@@ -6,7 +6,7 @@ const Nav: Component = () => {
   return (
     <nav class="mt-5 mb-5">
       <NavLink
-        href="/"
+        href="/1"
         class="me-2 btn btn-primary"
         activeClass="btn-success"
         end
