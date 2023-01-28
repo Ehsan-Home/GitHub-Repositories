@@ -52,9 +52,8 @@ const Home: Component = () => {
         <input id="username" type="text" class="p-1 align-middle" required />
         <button class="ms-3 btn btn-dark">Search</button>
       </form>
-      <h3>
-        Repos of {username()} | page {pageNumber()}
-      </h3>
+      <h3>Repos of {username()}</h3>
+      <h5>Page {pageNumber()}</h5>
       <Show when={!isLoading()} fallback={<Spinner />}>
         <Show when={repos().length !== 0} fallback={<Empty />}>
           <For each={repos()}>{(repo: Card) => <CardRepo repo={repo} />}</For>
