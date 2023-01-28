@@ -9,6 +9,7 @@ import Spinner from "../components/Spinner";
 const [username, setUsername] = createSignal("Ehsan-Home");
 const [repos, setRepos] = createSignal([]);
 const [isLoading, setIsLoading] = createSignal(true);
+const [pageNumber, setPageNumber] = createSignal("1");
 
 const Home: Component = () => {
   // createEffect(async () => {
@@ -33,6 +34,9 @@ const Home: Component = () => {
   });
 
   const params = useParams();
+  createEffect(() => {
+    setPageNumber(params.id);
+  });
 
   const extractUserName = (event: Event) => {
     event.preventDefault();
@@ -59,5 +63,5 @@ const Home: Component = () => {
   );
 };
 
-export { setIsLoading };
+export { setIsLoading, pageNumber };
 export default Home;
