@@ -1,14 +1,39 @@
-import { Component, createSignal, For, Show } from "solid-js";
-import { setUsername, repos } from "../App";
+import { useParams } from "solid-app-router";
+import { Component, createSignal, createEffect, For, Show } from "solid-js";
 import CardRepo from "../components/CardRepo";
 import Empty from "../components/Empty";
 import { Card } from "../components/Interfaces";
 import Pagination from "../components/Pagination";
 import Spinner from "../components/Spinner";
 
+const [username, setUsername] = createSignal("Ehsan-Home");
+const [repos, setRepos] = createSignal([]);
 const [isLoading, setIsLoading] = createSignal(true);
 
 const Home: Component = () => {
+  // createEffect(async () => {
+  //   const data = await fetch(
+  //     `https://api.github.com/users/${username()}/repos`
+  //   );
+  //   setRepos(await data.json());
+  //   setIsLoading(false);
+  // });
+  createEffect(() => {
+    setIsLoading(true);
+    fetch(`https://api.github.com/users/${username()}/repos`)
+      .then((res) => res.json())
+      .then((res: []) => {
+        setRepos(res);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
+
+  const params = useParams();
+  console.log("id", params.id);
+
   const extractUserName = (event: Event) => {
     event.preventDefault();
     const usernameTextInput = document.getElementById(
