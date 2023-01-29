@@ -55,9 +55,9 @@ const Home: Component = () => {
       <h3>Repos of {username()}</h3>
       <h5>Page {pageNumber()}</h5>
       <Show when={!isLoading()} fallback={<Spinner />}>
-        <Show when={repos().length !== 0} fallback={<Empty />}>
-          <For each={repos()}>{(repo: Card) => <CardRepo repo={repo} />}</For>
-        </Show>
+        <For each={repos()} fallback={<Empty />}>
+          {(repo: Card) => <CardRepo repo={repo} />}
+        </For>
       </Show>
       <Pagination />
     </div>
