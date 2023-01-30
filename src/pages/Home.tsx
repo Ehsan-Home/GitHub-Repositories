@@ -49,7 +49,13 @@ const Home: Component = () => {
   return (
     <div>
       <form class="mb-3" onSubmit={(event) => extractUserName(event)}>
-        <input id="username" type="text" class="p-1 align-middle" required />
+        <input
+          placeholder="Type the username"
+          id="username"
+          type="text"
+          class="p-1 align-middle"
+          required
+        />
         <button class="ms-3 btn btn-dark">Search</button>
       </form>
       <h3>Repos of {username()}</h3>
