@@ -58,8 +58,11 @@ const Home: Component = () => {
         />
         <button class="ms-3 btn btn-dark">Search</button>
       </form>
-      <h3>Repos of {username()}</h3>
-      <h5>Page {pageNumber()}</h5>
+      <div class="my-3">
+        <h3>Repos of {username()}</h3>
+        <h5>Page {pageNumber()}</h5>
+      </div>
+
       <Show when={!isLoading()} fallback={<Spinner />}>
         <For each={repos()} fallback={<Empty />}>
           {(repo: Card) => <CardRepo repo={repo} />}
