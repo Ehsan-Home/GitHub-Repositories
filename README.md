@@ -1,4 +1,26 @@
-## Usage
+# GitHub Favorite Repositories Inventory (GitHubventory) 📦
+
+I implemented a web app that you can search different repositories of a user and save them!
+
+## Tech-stack 🖲️
+
+Front-end:
+
+- [Soild.js](https://www.solidjs.com/)
+- TypeScript
+- Bootstrap
+- [Vite](https://vitejs.dev/)
+- [PNPM](https://pnpm.io/)
+
+This web app uses local-storage to store and retrieve saved repositories.
+
+## Future Tasks 🔮
+
+- Record YouTube video.
+- Containerize the app.
+- Release the app.
+
+## PNPM Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
 
