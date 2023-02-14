@@ -1,6 +1,7 @@
 # GitHub Favorite Repositories Inventory (GitHubventory) 📦
 
 I implemented a web app that you can search different repositories of a user and save them!
+You can see the demo in [YouTube](https://youtu.be/culW-7x3f5I)
 
 ## Tech-stack 🖲️
 
