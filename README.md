@@ -17,7 +17,7 @@ This web app uses local-storage to store and retrieve saved repositories.
 
 ## Future Tasks 🔮
 
-- Record YouTube video.
+- ✅ Record YouTube video.
 - Containerize the app.
 - Release the app.
 
