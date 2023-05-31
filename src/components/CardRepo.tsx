@@ -32,6 +32,10 @@ const CardRepo: Component<CardProps> = ({ repo }) => {
         </div>
         <div class="card-body">
           <p class="card-text">{repo.description || <i>No description</i>}</p>
+          <p class="card-text">
+            <span class="text-secondary">Language</span>:{" "}
+            {repo.language || <i>Not available</i>}
+          </p>
         </div>
         <div class="card-footer">
           <Show
