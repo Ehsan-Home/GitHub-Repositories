@@ -26,6 +26,9 @@ const CardRepo: Component<CardProps> = ({ repo }) => {
       <div class="card mb-3 h-100">
         <div class="card-header">
           <strong>{repo.name}</strong>
+          <a href={repo.html_url} class="mx-1">
+            <i class="fa-solid fa-folder-open"></i>
+          </a>
         </div>
         <div class="card-body">
           <p class="card-text">{repo.description || <i>No description</i>}</p>
@@ -49,13 +52,6 @@ const CardRepo: Component<CardProps> = ({ repo }) => {
               UnSave
             </button>
           </Show>
-          <a
-            class="btn btn-outline-dark mx-1 btn-sm"
-            href={repo.html_url}
-            role="button"
-          >
-            View
-          </a>
         </div>
       </div>
     </div>
