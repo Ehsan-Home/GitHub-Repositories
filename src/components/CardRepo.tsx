@@ -19,31 +19,42 @@ const isRepoSaved = (repoId: string) => {
 };
 
 const CardRepo: Component<CardProps> = ({ repo }) => {
+  console.log(repo);
+
   return (
     <div class="card mb-3">
-      <div class="card-header">&#11088; starts: {repo.stargazers_count}</div>
+      <div class="card-header">
+        <strong>{repo.name}</strong>
+      </div>
       <div class="card-body">
-        <a
-          href={repo.html_url}
-          class="h4 card-title text-decoration-none"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <strong>{repo.owner.login}</strong>/{repo.name}
-        </a>
-        <p class="card-text">{repo.description}</p>
+        <p class="card-text">{repo.description || <i>No description</i>}</p>
+      </div>
+      <div class="card-footer">
         <Show
           when={isRepoSaved(repo.id)}
           fallback={
-            <button class="btn btn-success" onClick={() => saveClicked(repo)}>
+            <button
+              class="btn btn-primary btn-sm"
+              onClick={() => saveClicked(repo)}
+            >
               Save
             </button>
           }
         >
-          <button class="btn btn-danger" onClick={() => unsaveClicked(repo.id)}>
+          <button
+            class="btn btn-danger btn-sm"
+            onClick={() => unsaveClicked(repo.id)}
+          >
             UnSave
           </button>
         </Show>
+        <a
+          class="btn btn-outline-dark mx-1 btn-sm"
+          href={repo.html_url}
+          role="button"
+        >
+          View
+        </a>
       </div>
     </div>
   );
