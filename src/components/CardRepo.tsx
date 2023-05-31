@@ -38,24 +38,40 @@ const CardRepo: Component<CardProps> = ({ repo }) => {
           </p>
         </div>
         <div class="card-footer">
-          <Show
-            when={isRepoSaved(repo.id)}
-            fallback={
-              <button
-                class="btn btn-primary btn-sm"
-                onClick={() => saveClicked(repo)}
+          <div class="d-flex">
+            <div class="me-auto p-1">
+              <Show
+                when={isRepoSaved(repo.id)}
+                fallback={
+                  <button
+                    class="btn btn-primary btn-sm"
+                    onClick={() => saveClicked(repo)}
+                  >
+                    Save
+                  </button>
+                }
               >
-                Save
-              </button>
-            }
-          >
-            <button
-              class="btn btn-danger btn-sm"
-              onClick={() => unsaveClicked(repo.id)}
-            >
-              UnSave
-            </button>
-          </Show>
+                <button
+                  class="btn btn-danger btn-sm"
+                  onClick={() => unsaveClicked(repo.id)}
+                >
+                  UnSave
+                </button>
+              </Show>
+            </div>
+            <div class="p-1">
+              <i class="fa-solid fa-star p-1"></i>
+              {repo.stargazers_count}
+            </div>
+            <div class="p-1">
+              <i class="fa-solid fa-eye p-1"></i>
+              {repo.watchers_count}
+            </div>
+            <div class="p-1">
+              <i class="fa-solid fa-code-fork p-1"></i>
+              {repo.forks_count}
+            </div>
+          </div>
         </div>
       </div>
     </div>

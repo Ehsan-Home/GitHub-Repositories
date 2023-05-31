@@ -4,6 +4,8 @@ export interface Card {
   name: string;
   description: string;
   stargazers_count: string;
+  forks_count: string;
+  watchers_count: string;
   language: string;
   owner: {
     login: string;
