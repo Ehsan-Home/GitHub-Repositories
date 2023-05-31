@@ -6,13 +6,15 @@ import SavedRepos from "./pages/SavedRepos";
 
 const App: Component = () => {
   return (
-    <div class="container">
+    <>
       <Nav />
-      <Routes>
-        <Route path="/:id" component={Home} />
-        <Route path="/savedrepos" component={SavedRepos} />
-      </Routes>
-    </div>
+      <div class="container">
+        <Routes>
+          <Route path="/:id" component={Home} />
+          <Route path="/savedrepos" component={SavedRepos} />
+        </Routes>
+      </div>
+    </>
   );
 };
 
