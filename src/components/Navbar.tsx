@@ -32,7 +32,7 @@ const Nav: Component = () => {
             </li>
             <li class="nav-item">
               <NavLink href="/savedrepos" class="nav-link" activeClass="active">
-                Saved({savedRepos().length})
+                My List ({savedRepos().length})
               </NavLink>
             </li>
           </ul>
