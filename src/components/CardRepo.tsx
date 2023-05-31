@@ -22,39 +22,41 @@ const CardRepo: Component<CardProps> = ({ repo }) => {
   console.log(repo);
 
   return (
-    <div class="card mb-3">
-      <div class="card-header">
-        <strong>{repo.name}</strong>
-      </div>
-      <div class="card-body">
-        <p class="card-text">{repo.description || <i>No description</i>}</p>
-      </div>
-      <div class="card-footer">
-        <Show
-          when={isRepoSaved(repo.id)}
-          fallback={
-            <button
-              class="btn btn-primary btn-sm"
-              onClick={() => saveClicked(repo)}
-            >
-              Save
-            </button>
-          }
-        >
-          <button
-            class="btn btn-danger btn-sm"
-            onClick={() => unsaveClicked(repo.id)}
+    <div class="col-sm-12 col-md-6 mb-4">
+      <div class="card mb-3 h-100">
+        <div class="card-header">
+          <strong>{repo.name}</strong>
+        </div>
+        <div class="card-body">
+          <p class="card-text">{repo.description || <i>No description</i>}</p>
+        </div>
+        <div class="card-footer">
+          <Show
+            when={isRepoSaved(repo.id)}
+            fallback={
+              <button
+                class="btn btn-primary btn-sm"
+                onClick={() => saveClicked(repo)}
+              >
+                Save
+              </button>
+            }
           >
-            UnSave
-          </button>
-        </Show>
-        <a
-          class="btn btn-outline-dark mx-1 btn-sm"
-          href={repo.html_url}
-          role="button"
-        >
-          View
-        </a>
+            <button
+              class="btn btn-danger btn-sm"
+              onClick={() => unsaveClicked(repo.id)}
+            >
+              UnSave
+            </button>
+          </Show>
+          <a
+            class="btn btn-outline-dark mx-1 btn-sm"
+            href={repo.html_url}
+            role="button"
+          >
+            View
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -64,9 +64,11 @@ const Home: Component = () => {
       </div>
 
       <Show when={!isLoading()} fallback={<Spinner />}>
-        <For each={repos()} fallback={<Empty />}>
-          {(repo: Card) => <CardRepo repo={repo} />}
-        </For>
+        <div class="row">
+          <For each={repos()} fallback={<Empty />}>
+            {(repo: Card) => <CardRepo repo={repo} />}
+          </For>
+        </div>
       </Show>
       <Pagination />
     </div>
