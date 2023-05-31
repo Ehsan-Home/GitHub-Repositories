@@ -4,14 +4,11 @@ import img from "../static/images/github.png";
 const Home: Component = () => {
   return (
     <>
-      {/* <div class="text-center">
-        <i class="fa-brands fa-square-github fa-spin fa-2xl"></i>
-      </div> */}
       <img
         src={img}
         class="mx-auto d-block mt-3"
-        width={200}
-        height={200}
+        width={150}
+        height={150}
         alt="GitHub logo"
       ></img>
       <div class="text-center mt-3">
