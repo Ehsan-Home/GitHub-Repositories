@@ -26,16 +26,12 @@ const Nav: Component = () => {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <NavLink href="/1" class="nav-link" activeClass="btn-success" end>
-                Home
+              <NavLink href="/1" class="nav-link" activeClass="active" end>
+                Dashboard
               </NavLink>
             </li>
             <li class="nav-item">
-              <NavLink
-                href="/savedrepos"
-                class="nav-link"
-                activeClass="btn-success"
-              >
+              <NavLink href="/savedrepos" class="nav-link" activeClass="active">
                 Saved({savedRepos().length})
               </NavLink>
             </li>
