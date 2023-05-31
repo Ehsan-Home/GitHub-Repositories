@@ -37,6 +37,10 @@ const Home: Component = () => {
           </a>
         </div>
       </div>
+      <div class="text-secondary text-center my-4">
+        {new Date().getFullYear()} @
+        <a href="https://ehsanghasaei.netlify.app/">Ehsan Ghasaei</a>
+      </div>
     </>
   );
 };
