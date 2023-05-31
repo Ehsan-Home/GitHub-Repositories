@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  bootstrap: ^5.2.3
   solid-app-router: ^0.4.2
   solid-js: ^1.6.6
   typescript: ^4.9.4
@@ -9,7 +8,6 @@ specifiers:
   vite-plugin-solid: ^2.5.0
 
 dependencies:
-  bootstrap: 5.2.3
   solid-app-router: 0.4.2_solid-js@1.6.9
   solid-js: 1.6.9
 
@@ -600,12 +598,6 @@ packages:
       '@babel/core': 7.20.12
       babel-plugin-jsx-dom-expressions: 0.35.14_@babel+core@7.20.12
     dev: true
-
-  /bootstrap/5.2.3:
-    resolution: {integrity: sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==}
-    peerDependencies:
-      '@popperjs/core': ^2.11.6
-    dev: false
 
   /browserslist/4.21.4:
     resolution: {integrity: sha512-CBHJJdDmgjl3daYjN5Cp5kbTf1mUhZoS+beLklHIvkOWscs83YAhLlF3Wsh/lciQYAcbBJgTOD44VtG31ZM4Hw==}

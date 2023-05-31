@@ -10,11 +10,15 @@ const [savedRepos, setSavedRepos] = createSignal(savedReposFromLocalStorage);
 const SavedRepos: Component = () => {
   return (
     <div>
-      <h3>Saved Repos</h3>
+      <div class="my-4">
+        <h4>Saved Repositories</h4>
+      </div>
       <Show when={savedRepos().length !== 0} fallback={<Empty />}>
-        <For each={savedRepos()}>
-          {(savedRepo: Card) => <CardRepo repo={savedRepo} />}
-        </For>
+        <div class="row">
+          <For each={savedRepos()}>
+            {(savedRepo: Card) => <CardRepo repo={savedRepo} />}
+          </For>
+        </div>
       </Show>
     </div>
   );

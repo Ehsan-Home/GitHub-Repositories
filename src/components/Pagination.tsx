@@ -1,6 +1,6 @@
 import { NavLink } from "solid-app-router";
 import { Component, For } from "solid-js";
-import { pageNumber } from "../pages/Home";
+import { pageNumber } from "../pages/Dashboard";
 
 const Pagination: Component = () => {
   return (
