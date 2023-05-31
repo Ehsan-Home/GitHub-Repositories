@@ -17,10 +17,10 @@ This web app uses local-storage to store and retrieve saved repositories.
 
 ## Future Tasks 🔮
 
-- Build Backend with Django (SOAP API).
 - ✅ Record YouTube video.
-- Containerize the app.
-- Release the app.
+- ✅ Release the app.
+- Improve UI
+- Add homepage
 
 ## PNPM Usage
 
