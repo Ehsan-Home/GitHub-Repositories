@@ -48,6 +48,9 @@ const Home: Component = () => {
 
   return (
     <div>
+      <div class="my-4">
+        <h4>Repos of {username()}</h4>
+      </div>
       <form class="mb-3" onSubmit={(event) => extractUserName(event)}>
         <input
           placeholder="Type the username"
@@ -58,10 +61,6 @@ const Home: Component = () => {
         />
         <button class="ms-3 btn btn-dark">Search</button>
       </form>
-      <div class="my-3">
-        <h3>Repos of {username()}</h3>
-        <h5>Page {pageNumber()}</h5>
-      </div>
 
       <Show when={!isLoading()} fallback={<Spinner />}>
         <div class="row">
