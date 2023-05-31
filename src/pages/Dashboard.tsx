@@ -11,7 +11,7 @@ const [repos, setRepos] = createSignal([]);
 const [isLoading, setIsLoading] = createSignal(true);
 const [pageNumber, setPageNumber] = createSignal("1");
 
-const Home: Component = () => {
+const Dashboard: Component = () => {
   // createEffect(async () => {
   //   const data = await fetch(
   //     `https://api.github.com/users/${username()}/repos`
@@ -90,4 +90,4 @@ const Home: Component = () => {
 };
 
 export { setIsLoading, pageNumber };
-export default Home;
+export default Dashboard;
