@@ -1,6 +1,6 @@
 import { Route, Routes } from "solid-app-router";
 import { Component } from "solid-js";
-import Nav from "./components/Nav";
+import Nav from "./components/Navbar";
 import Home from "./pages/Home";
 import SavedRepos from "./pages/SavedRepos";
 
