@@ -49,7 +49,7 @@ const Home: Component = () => {
   return (
     <div>
       <div class="my-4">
-        <h4>Repos of {username()}</h4>
+        <h4>Repositories of {username()}</h4>
       </div>
       <form
         class="row row-cols-lg-auto g-3 align-items-center mb-4"
