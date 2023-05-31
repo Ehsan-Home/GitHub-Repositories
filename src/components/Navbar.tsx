@@ -9,7 +9,7 @@ const Nav: Component = () => {
       style={{ background: "rgba(0, 0, 0, 0.03)" }}
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           GitHubVentory
         </a>
         <button
@@ -32,7 +32,7 @@ const Nav: Component = () => {
             </li>
             <li class="nav-item">
               <NavLink href="/savedrepos" class="nav-link" activeClass="active">
-                Saved({savedRepos().length})
+                My List ({savedRepos().length})
               </NavLink>
             </li>
           </ul>

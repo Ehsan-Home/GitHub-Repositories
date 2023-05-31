@@ -11,7 +11,7 @@ const SavedRepos: Component = () => {
   return (
     <div>
       <div class="my-4">
-        <h4>Saved Repositories</h4>
+        <h4>My List</h4>
       </div>
       <Show when={savedRepos().length !== 0} fallback={<Empty />}>
         <div class="row">
