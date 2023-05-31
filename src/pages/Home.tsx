@@ -27,10 +27,14 @@ const Home: Component = () => {
       </p>
       <div class="d-flex justify-content-center">
         <div class="p-2">
-          <button class="btn btn-lg btn-primary">Dashboard</button>
+          <a role="button" href="/1" class="btn btn-lg btn-primary">
+            Dashboard
+          </a>
         </div>
         <div class="p-2">
-          <button class="btn btn-lg btn-warning">My list</button>
+          <a role="button" href="/savedrepos" class="btn btn-lg btn-warning">
+            My list
+          </a>
         </div>
       </div>
     </>

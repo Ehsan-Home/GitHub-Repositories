@@ -9,7 +9,7 @@ const Nav: Component = () => {
       style={{ background: "rgba(0, 0, 0, 0.03)" }}
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           GitHubVentory
         </a>
         <button
