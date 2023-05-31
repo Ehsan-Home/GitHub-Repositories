@@ -51,15 +51,30 @@ const Home: Component = () => {
       <div class="my-4">
         <h4>Repos of {username()}</h4>
       </div>
-      <form class="mb-3" onSubmit={(event) => extractUserName(event)}>
-        <input
-          placeholder="Type the username"
-          id="username"
-          type="text"
-          class="p-1 align-middle"
-          required
-        />
-        <button class="ms-3 btn btn-dark">Search</button>
+      <form
+        class="row row-cols-lg-auto g-3 align-items-center mb-4"
+        onSubmit={(event) => extractUserName(event)}
+      >
+        <div class="col-12">
+          <label class="visually-hidden" for="inlineFormInputGroupUsername">
+            Username
+          </label>
+          <div class="input-group">
+            <div class="input-group-text">@</div>
+            <input
+              id="username"
+              type="text"
+              class="form-control"
+              placeholder="Username"
+            />
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">
+            Search
+          </button>
+        </div>
       </form>
 
       <Show when={!isLoading()} fallback={<Spinner />}>
