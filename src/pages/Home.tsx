@@ -12,13 +12,17 @@ const Home: Component = () => {
         alt="GitHub logo"
       ></img>
       <div class="text-center mt-3">
-        <h1 class="display-1">GitHubVentory</h1>
+        <h1 class="display-1" style={{ color: "#0d6efd" }}>
+          GitHubVentory
+        </h1>
       </div>
       <p class="lead text-center">👋🏻 Say goodbye to scattered bookmarks</p>
       <p class="text-center text-secondary">
         With countless repositories hosting innovative projects, it's no wonder
         developers find themselves lost in a sea of inspiring code bases. That's
-        where GitHubVentory comes in—a powerful and user-friendly web
+        where <strong style={{ color: "#0d6efd" }}>GitHubVentory</strong> comes
+        in—a <strong style={{ color: "green" }}>powerful</strong> and{" "}
+        <strong style={{ color: "green" }}>user-friendly</strong> web
         application designed to revolutionize the way you store and explore your
         favorite GitHub repositories.
       </p>
