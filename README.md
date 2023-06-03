@@ -1,7 +1,7 @@
 # GitHub Favorite Repositories Inventory (GitHubventory) 📦
 
 I implemented a web app that you can search different repositories of a user and save them!
-You can see the demo in [YouTube](https://youtu.be/culW-7x3f5I)
+The app is available at [App](https://githubventory.vercel.app/)
 
 ## Tech-stack 🖲️
 
@@ -19,8 +19,10 @@ This web app uses local-storage to store and retrieve saved repositories.
 
 - ✅ Record YouTube video.
 - ✅ Release the app.
-- Improve UI
-- Add homepage
+- ✅ Improve UI
+- ✅ Add homepage
+- Design logo
+- Setup a backend
 
 ## PNPM Usage
 
