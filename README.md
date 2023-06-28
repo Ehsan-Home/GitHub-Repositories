@@ -17,12 +17,12 @@ This web app uses local-storage to store and retrieve saved repositories.
 
 ## Future Tasks 🔮
 
-- ✅ Record YouTube video.
-- ✅ Release the app.
-- ✅ Improve UI
-- ✅ Add homepage
-- Design logo
-- Setup a backend
+- [x] Record YouTube video.
+- [x] Release the app.
+- [x] Improve UI
+- [x] Add homepage
+- [ ] Design logo
+- [ ] Setup a backend
 
 ## PNPM Usage
 
